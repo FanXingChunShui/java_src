@@ -26,6 +26,7 @@ package com.sun.corba.se.impl.encoding;
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
+import java.util.LinkedList;
 
 /**
  * Simple unsynchronized queue implementation for ByteBufferWithInfos.

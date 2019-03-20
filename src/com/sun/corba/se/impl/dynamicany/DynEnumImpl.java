@@ -25,15 +25,18 @@
 
 package com.sun.corba.se.impl.dynamicany;
 
-import com.sun.corba.se.spi.orb.ORB;
+import org.omg.CORBA.TypeCode;
 import org.omg.CORBA.Any;
 import org.omg.CORBA.BAD_OPERATION;
-import org.omg.CORBA.TypeCode;
+import org.omg.CORBA.INTERNAL;
 import org.omg.CORBA.TypeCodePackage.BadKind;
 import org.omg.CORBA.TypeCodePackage.Bounds;
-import org.omg.DynamicAny.DynAnyPackage.InvalidValue;
-import org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
-import org.omg.DynamicAny.DynEnum;
+import org.omg.DynamicAny.*;
+import org.omg.DynamicAny.DynAnyPackage.*;
+
+import com.sun.corba.se.spi.orb.ORB ;
+import com.sun.corba.se.spi.logging.CORBALogDomains ;
+import com.sun.corba.se.impl.logging.ORBUtilSystemException ;
 
 public class DynEnumImpl extends DynAnyBasicImpl implements DynEnum
 {
